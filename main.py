@@ -10,4 +10,9 @@ from model import *
 info()
 # %%
 model = model()
+data = data()
 # %%
+#	analyze data
+
+# %%
+#	evaluete models

@@ -130,56 +130,56 @@ class model(data):
 		self.network = MLPClassifier(alpha=0.0001, max_iter=1000, learning_rate_init=0.001, tol=0.5, learning_rate='adaptive', hidden_layer_sizes=(4, 470, 410, 300, 311), solver='adam', activation='tanh')
 		self.network.fit(self.X_train, self.Y_train)
 		y_pred = self.network.predict(self.X_test)
-		print("accuracy of MLP =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of mlp = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.network, "MLPClassifier.joblib")
 
 	def sgd(self):
 		self.sgd = SGDClassifier()
 		self.sgd.fit(self.X_train, self.Y_train)
 		y_pred = self.sgd.predict(self.X_test)
-		print("accuracy of sgd =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of sgd = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.sgd, "SGD.joblib")
 
 	def knn(self):
 		self.knn = KNeighborsClassifier()
 		self.knn.fit(self.X_train, self.Y_train)
 		y_pred = self.knn.predict(self.X_test)
-		print("accuracy of knn =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of knn = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.knn, "KNN.joblib")
 
 	def logistic_regression(self):
 		self.logistic_regression = LogisticRegression()
 		self.logistic_regression.fit(self.X_train, self.Y_train)
 		y_pred = self.logistic_regression.predict(self.X_test)
-		print("accuracy of logistic_regression =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of logistic_regression = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.logistic_regression, "LogisticRegression.joblib")
 
 	def svc(self):
 		self.svc = SVC()
 		self.svc.fit(self.X_train, self.Y_train)
 		y_pred = self.svc.predict(self.X_test)
-		print("accuracy of svc =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of svc = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.svc, "SVC.joblib")
 
 	def kmeans(self):
 		self.kmeans = KMeans()
 		self.kmeans.fit(self.X_train, self.Y_train)
 		y_pred = self.kmeans.predict(self.X_test)
-		print("accuracy of kmeans =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of kmeans = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.kmeans, "KMeans.joblib")
 
 	def tree(self):
 		self.tree = DecisionTreeClassifier()
 		self.tree.fit(self.X_train, self.Y_train)
 		y_pred = self.tree.predict(self.X_test)
-		print("accuracy of tree =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of tree = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.tree, "Tree.joblib")
 
 	def random_forest(self):
 		self.random_forest = RandomForestClassifier()
 		self.random_forest.fit(self.X_train, self.Y_train)
 		y_pred = self.random_forest.predict(self.X_test)
-		print("accuracy of random_forest =, ", metrics.accuracy_score(self.Y_test, y_pred))
+		print("accuracy of random_forest = ", metrics.accuracy_score(self.Y_test, y_pred))
 		joblib.dump(self.random_forest, "RandomForest.joblib")
 
 
